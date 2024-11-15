@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF 번역 뷰어</title>
+    <!-- PDF.js 라이브러리 로드 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js"></script>
+    <style>
+        /* 기본적인 폰트 설정과 배경색 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* PDF 콘텐츠의 최대 너비과 중앙 정렬 */
+        #pdf-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 제목과 부제목 스타일 */
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #222;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            color: #444;
+        }
+
+        p {
+            white-space: pre-wrap;
+            margin-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-bottom: 1em;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        /* 파일 입력 및 버튼의 중앙 정렬과 간격 */
+        #file-input,
+        #translate-button {
+            display: block;
+            margin: 10px auto;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* 버튼에 간단한 호버 효과 추가 */
+        #translate-button:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF 번역 뷰어</h1>
+    <input type="file" id="file-input" accept="application/pdf" />
+    <button id="translate-button">번역하기</button>
+    <div id="pdf-container">
+        <div id="pdf-content">PDF 내용을 여기에 표시합니다.</div>
+    </div>
+
+    <!-- app.js 스크립트 로드 -->
+    <script src="app.js"></script>
+</body>
+</html>
